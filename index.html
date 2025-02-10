@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cep</title>
+</head>
+<body>
+    <header class="header">
+        <h1 class="formTitle">Formulário</h1>
+    </header>
+
+    <form id="form">
+        <fieldset>
+            <label for="name">Nome</label>
+            <input type="name" id="name" placeholder="Nome completo">
+        </fieldset>
+        <fieldset>
+            <label for="mail">E-mail</label>
+            <input type="email" name="mail" id="mail" placeholder="Seu melhor e-mail">
+        </fieldset>
+        <fieldset>
+            <label for="zipCode">CEP</label>
+            <input type="text" name="zipCode" id="zipCode" placeholder="Digite o CEP" maxlength="8">
+        </fieldset>
+        <fieldset>
+            <label for="state">Estado</label>
+            <input type="text" name="state" id="state">
+        </fieldset>
+        <fieldset>
+            <label for="city">Cidade</label>
+            <input type="text" name="city" id="city">
+        </fieldset>
+        <fieldset>
+            <label for="district">Bairro</label>
+            <input type="text" name="district" id="district">
+        </fieldset>
+        <fieldset>
+            <label for="street">Rua</label>
+            <input type="text" name="street" id="street">
+        </fieldset>
+        <fieldset>
+            <label for="tel">Telefone</label>
+            <input type="tel" name="tel" id="tel">
+        </fieldset>
+
+        <input type="button" value="Cadastrar" id="register">
+    </form>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
