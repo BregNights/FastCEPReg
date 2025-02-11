@@ -4,49 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cep</title>
+    <title>Cadastro</title>
 </head>
 <body>
-    <header class="header">
-        <h1 class="formTitle">Formulário</h1>
-    </header>
+    <div>
 
     <form id="form">
-        <fieldset>
+    
+        <fieldset class="information">
+            <legend>Informações</legend>
+
+            
             <label for="name">Nome</label>
-            <input type="name" id="name" placeholder="Nome completo">
+            <input type="text" id="name" placeholder="Nome" required>
+    
+            <label for="surname">Sobrenome</label>
+            <input type="text" id="surname" placeholder="Sobrenome" required>
+
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+
+            <label for="birth">Data de nascimento</label>
+            <input type="date" name="birth" id="birth" required>
+
+            <label for="mail">Seu e-mail</label>
+            <input type="email" name="mail" id="mail" placeholder="ex: meunome@exemplo.com" required>
+
+            <label for="tel">Celular</label>
+            <input type="tel" name="tel" id="tel" placeholder="(00) 00000-0000" required>
         </fieldset>
-        <fieldset>
-            <label for="mail">E-mail</label>
-            <input type="email" name="mail" id="mail" placeholder="Seu melhor e-mail">
-        </fieldset>
-        <fieldset>
+    
+        <fieldset id="address">
+            <legend>Endereço</legend>
             <label for="zipCode">CEP</label>
-            <input type="text" name="zipCode" id="zipCode" placeholder="Digite o CEP" maxlength="8">
-        </fieldset>
-        <fieldset>
+            <input type="text" name="zipCode" id="zipCode" placeholder="00000000" maxlength="8" required>
+    
             <label for="state">Estado</label>
-            <input type="text" name="state" id="state">
-        </fieldset>
-        <fieldset>
+            <input type="text" name="state" id="state" placeholder="Estado" required>
+    
             <label for="city">Cidade</label>
-            <input type="text" name="city" id="city">
-        </fieldset>
-        <fieldset>
+            <input type="text" name="city" id="city" placeholder="Cidade" required>
+    
             <label for="district">Bairro</label>
-            <input type="text" name="district" id="district">
-        </fieldset>
-        <fieldset>
+            <input type="text" name="district" id="district" placeholder="Bairro" required>
+    
             <label for="street">Rua</label>
-            <input type="text" name="street" id="street">
-        </fieldset>
-        <fieldset>
-            <label for="tel">Telefone</label>
-            <input type="tel" name="tel" id="tel">
+            <input type="text" name="street" id="street" placeholder="Rua" required>
+    
+            <label for="num">Número</label>
+            <input type="text" name="num" id="num" placeholder="Número" required>
+    
+            <label for="complement">Complemento</label>
+            <input type="text" name="complement" id="complement" placeholder="Complemento">
         </fieldset>
 
-        <input type="button" value="Cadastrar" id="register">
+    
+        
     </form>
+    <button type="submit" id="register">Cadastrar</button>
+</div>
 
     <script src="script.js" defer></script>
 </body>

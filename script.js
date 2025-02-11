@@ -26,7 +26,6 @@ const fieldState = document.querySelector('#state')
 const fieldCity = document.querySelector('#city')
 const fieldDistrict = document.querySelector('#district')
 const fieldStreet = document.querySelector('#street')
-const fieldTel = document.querySelector('#tel')
 
 function cleanFields() { // Limpar campos
     fieldZipCode.value = ""
@@ -34,7 +33,6 @@ function cleanFields() { // Limpar campos
     fieldCity.value = ""
     fieldDistrict.value = ""
     fieldStreet.value = ""
-    fieldTel.value = ""
 }
 
 function verifyZipCode(zipcode) { //Verifica se CEP é  um REGEX válido
@@ -47,7 +45,6 @@ function addFields(promise) { //Preencher campos
     fieldCity.value = promise.localidade
     fieldDistrict.value = promise.bairro
     fieldStreet.value = promise.logradouro
-    fieldTel.value = promise.ddd
 }
 
 document.querySelector('#zipCode').addEventListener("input", async function () {
@@ -61,7 +58,6 @@ document.querySelector('#zipCode').addEventListener("input", async function () {
         fieldCity.value = "..."
         fieldDistrict.value = "..."
         fieldStreet.value = "..."
-        fieldTel.value = "..."
         
         try {
             if (verifyZipCode(fieldZipCodeNoTrace)) {
