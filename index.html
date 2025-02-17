@@ -1,69 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Styles -->
     <link rel="stylesheet" href="style.css">
-    <title>Cadastro</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+
+    <title>Cadastrar-se</title>
 </head>
+
 <body>
-    <div>
+    <div class="container">
+        <form id="form1">
+            <h3>Criar Nova Conta</h3>
+            <input type="text" placeholder="Email" required>
+            <input type="password" placeholder="Senha" required>
+            <input type="password" placeholder="Confirme a Senha" required>
 
-    <form id="form">
-    
-        <fieldset class="information">
-            <legend>Informações</legend>
+            <div class="btn-box">
+                <button type="button" id="next1">Proximo</button>
+            </div>
+        </form>
 
-            
-            <label for="name">Nome</label>
-            <input type="text" id="name" placeholder="Nome" required>
-    
-            <label for="surname">Sobrenome</label>
-            <input type="text" id="surname" placeholder="Sobrenome" required>
+        <form id="form2">
+            <h3>Informações</h3>
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="text" placeholder="CPF" required>
+            <input type="tel" placeholder="Celular" required>
 
-            <label for="cpf">CPF</label>
-            <input type="text" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+            <div class="btn-box">
+                <button type="button" id="back1">Voltar</button>
+                <button type="button" id="next2">Proximo</button>
+            </div>
+        </form>
 
-            <label for="birth">Data de nascimento</label>
-            <input type="date" name="birth" id="birth" required>
+        <form id="form3">
+            <h3>Endereço</h3>
+            <div class="content">
+                <div>
+                    <input type="text" id="zipCode" placeholder="CEP" maxlength="8" required>
+                    <input type="text" id="city" placeholder="Cidade" required>
+                </div>
+                <div>
+                    <input type="text" id="state" placeholder="Estado" required>
+                    <input type="text" id="district" placeholder="Bairro" required>
+                </div>
+                <div>
+                    <input type="text" id="street" placeholder="Rua" required>
+                    <input type="text" name="num" id="num" placeholder="Número" required>
+                </div>
 
-            <label for="mail">Seu e-mail</label>
-            <input type="email" name="mail" id="mail" placeholder="ex: meunome@exemplo.com" required>
 
-            <label for="tel">Celular</label>
-            <input type="tel" name="tel" id="tel" placeholder="(00) 00000-0000" required>
-        </fieldset>
-    
-        <fieldset id="address">
-            <legend>Endereço</legend>
-            <label for="zipCode">CEP</label>
-            <input type="text" name="zipCode" id="zipCode" placeholder="00000000" maxlength="8" required>
-    
-            <label for="state">Estado</label>
-            <input type="text" name="state" id="state" placeholder="Estado" required>
-    
-            <label for="city">Cidade</label>
-            <input type="text" name="city" id="city" placeholder="Cidade" required>
-    
-            <label for="district">Bairro</label>
-            <input type="text" name="district" id="district" placeholder="Bairro" required>
-    
-            <label for="street">Rua</label>
-            <input type="text" name="street" id="street" placeholder="Rua" required>
-    
-            <label for="num">Número</label>
-            <input type="text" name="num" id="num" placeholder="Número" required>
-    
-            <label for="complement">Complemento</label>
-            <input type="text" name="complement" id="complement" placeholder="Complemento">
-        </fieldset>
+            </div>
+            <div class="btn-box">
+                <button type="button" id="back2">Proximo</button>
+                <button type="button" id="next3">Registrar</button>
+            </div>
+        </form>
 
-    
-        
-    </form>
-    <button type="submit" id="register">Cadastrar</button>
-</div>
+        <div class="step-row">
+            <div id="progress"></div>
+            <div class="step-col"><small>Step 1</small></div>
+            <div class="step-col"><small>Step 2</small></div>
+            <div class="step-col"><small>Step 3</small></div>
+        </div>
+    </div>
 
     <script src="script.js" defer></script>
 </body>
+
 </html>
