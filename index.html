@@ -21,7 +21,13 @@
     <div class="container">
       <form id="form1">
         <h3>Criar Nova Conta</h3>
-        <input type="text" placeholder="Email" required />
+        <input
+          type="text"
+          placeholder="Email"
+          required
+          autocapitalize="none"
+          pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i"
+        />
         <input type="password" placeholder="Senha" required />
         <input type="password" placeholder="Confirme a Senha" required />
 
@@ -71,13 +77,7 @@
           </div>
           <div>
             <input type="text" id="street" placeholder="Rua" required />
-            <input
-              type="text"
-              name="num"
-              id="num"
-              placeholder="Nº"
-              required
-            />
+            <input type="text" name="num" id="num" placeholder="Nº" required />
           </div>
         </div>
         <div class="btn-box">
