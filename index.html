@@ -1,80 +1,99 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Styles -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
 
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
-        rel="stylesheet">
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+      rel="stylesheet"
+    />
 
     <title>Cadastrar-se</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="container">
-        <form id="form1">
-            <h3>Criar Nova Conta</h3>
-            <input type="text" placeholder="Email" required>
-            <input type="password" placeholder="Senha" required>
-            <input type="password" placeholder="Confirme a Senha" required>
+      <form id="form1">
+        <h3>Criar Nova Conta</h3>
+        <input type="text" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <input type="password" placeholder="Confirme a Senha" required />
 
-            <div class="btn-box">
-                <button type="button" id="next1">Proximo</button>
-            </div>
-        </form>
-
-        <form id="form2">
-            <h3>Informações</h3>
-            <input type="text" placeholder="Nome Completo" required>
-            <input type="text" placeholder="CPF" required>
-            <input type="tel" placeholder="Celular" required>
-
-            <div class="btn-box">
-                <button type="button" id="back1">Voltar</button>
-                <button type="button" id="next2">Proximo</button>
-            </div>
-        </form>
-
-        <form id="form3">
-            <h3>Endereço</h3>
-            <div class="content">
-                <div>
-                    <input type="text" id="zipCode" placeholder="CEP" maxlength="8" required>
-                    <input type="text" id="city" placeholder="Cidade" required>
-                </div>
-                <div>
-                    <input type="text" id="state" placeholder="Estado" required>
-                    <input type="text" id="district" placeholder="Bairro" required>
-                </div>
-                <div>
-                    <input type="text" id="street" placeholder="Rua" required>
-                    <input type="text" name="num" id="num" placeholder="Número" required>
-                </div>
-
-
-            </div>
-            <div class="btn-box">
-                <button type="button" id="back2">Proximo</button>
-                <button type="button" id="next3">Registrar</button>
-            </div>
-        </form>
-
-        <div class="step-row">
-            <div id="progress"></div>
-            <div class="step-col"><small>Step 1</small></div>
-            <div class="step-col"><small>Step 2</small></div>
-            <div class="step-col"><small>Step 3</small></div>
+        <div class="btn-box">
+          <button type="button" id="next1">Proximo</button>
         </div>
+      </form>
+
+      <form id="form2">
+        <h3>Informações</h3>
+        <input type="text" placeholder="Nome Completo" required />
+        <input
+          type="number"
+          placeholder="CPF"
+          required
+          pattern="([0-9]{2}[\.]?[0-9]{3}[\.]?[0-9]{3}[\/]?[0-9]{4}[-]?[0-9]{2})|([0-9]{3}[\.]?[0-9]{3}[\.]?[0-9]{3}[-]?[0-9]{2})"
+        />
+        <input
+          type="tel"
+          placeholder="Celular"
+          required
+          pattern="^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}\-[0-9]{4}$"
+        />
+
+        <div class="btn-box">
+          <button type="button" id="back1">Voltar</button>
+          <button type="button" id="next2">Proximo</button>
+        </div>
+      </form>
+
+      <form id="form3">
+        <h3>Endereço</h3>
+        <div class="content">
+          <div>
+            <input
+              type="number"
+              id="zipCode"
+              placeholder="CEP"
+              maxlength="8"
+              required
+            />
+            <input type="text" id="city" placeholder="Cidade" required />
+          </div>
+          <div>
+            <input type="text" id="state" placeholder="Estado" required />
+            <input type="text" id="district" placeholder="Bairro" required />
+          </div>
+          <div>
+            <input type="text" id="street" placeholder="Rua" required />
+            <input
+              type="text"
+              name="num"
+              id="num"
+              placeholder="Nº"
+              required
+            />
+          </div>
+        </div>
+        <div class="btn-box">
+          <button type="button" id="back2">Proximo</button>
+          <button type="button" id="next3">Registrar</button>
+        </div>
+      </form>
+
+      <div class="step-row">
+        <div id="progress"></div>
+        <div class="step-col"><small>Step 1</small></div>
+        <div class="step-col"><small>Step 2</small></div>
+        <div class="step-col"><small>Step 3</small></div>
+      </div>
     </div>
 
     <script src="script.js" defer></script>
-</body>
-
+  </body>
 </html>
