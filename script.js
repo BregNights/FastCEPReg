@@ -116,8 +116,3 @@ const completeName = document.querySelector('.form2 input[type="text"]');
 completeName.addEventListener("input", function () {
   this.value = this.value.replace(/\b\w/g, (char) => char.toUpperCase());
 });
-
-const email = document.querySelector('.form1 input[type="text"]');
-email.addEventListener("input", function () {
-    this.value = this.value.replace(/\b\w/g, (char) => char.toUpperCase());
-  });

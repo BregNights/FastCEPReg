@@ -14,23 +14,16 @@
       rel="stylesheet"
     />
 
-    <title>Cadastrar-se</title>
+    <title>Cadastre-se</title>
   </head>
 
   <body>
     <div class="container">
       <form id="form1">
         <h3>Criar Nova Conta</h3>
-        <input
-          type="text"
-          placeholder="Email"
-          required
-          autocapitalize="none"
-          pattern="/^[a-z0-9.]+@[a-z0-9]+\.[a-z]+\.([a-z]+)?$/i"
-        />
+        <input type="text" placeholder="Email" required autocapitalize="none" />
         <input type="password" placeholder="Senha" required />
         <input type="password" placeholder="Confirme a Senha" required />
-
         <div class="btn-box">
           <button type="button" id="next1">Proximo</button>
         </div>
@@ -51,7 +44,6 @@
           required
           pattern="^\([1-9]{2}\) (?:[2-8]|9[0-9])[0-9]{3}\-[0-9]{4}$"
         />
-
         <div class="btn-box">
           <button type="button" id="back1">Voltar</button>
           <button type="button" id="next2">Proximo</button>
